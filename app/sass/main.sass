@@ -1,0 +1,926 @@
+/*Reset style*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section
+  display: block
+
+body
+  line-height: 1
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after,
+q:before, q:after
+  content: ''
+  content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+  
+/* ================================================ */
+@import mixins
+@import fonts.sass
+
+// @font-face
+//   font-family: "________"
+//   src: url("../fonts/________/________.eot")
+//   src: url("../fonts/________/________.eot?#iefix")format("embedded-opentype"),
+//   url("../fonts/________/________.woff") format("woff"),
+//   url("../fonts/________/________.ttf") format("truetype")
+//   font-style: normal
+//   font-weight: normal
+
+
+$font-weight: 400
+$font-size: 16px
+$line-height: 1.2
+$font-family: 'Open Sans' 
+$color: #000
+$wrapper: 1200px  //Оцентровка, размер макета
+
+body  
+  color: $color
+  font: $font-weight $font-size/$line-height $font-family, Arial, sans-serif
+  background: #fff
+
+
+/* MAIN STYLES */ 
+/* ================================================ */
+.main-wrapper
+  padding: 0
+  min-width: 320px
+  position: relative 
+  overflow: hidden
+  opacity: 1
+  min-height: 100% 
+
+.wrapper 
+  max-width: $wrapper
+  padding: 0 40px 0 40px
+  margin: 0 auto
+  position: relative
+
+img
+  display: block
+  max-width: 100%
+
+span 
+  display: inline-block
+
+button
+  &:focus
+    outline: none
+  &:active
+    outline: none
+
+.container
+  max-width: 1200px
+  padding: 0
+.btn
+  width: 196px
+  height: 56px
+  color: #ffffff
+  font-family: "Open Sans"
+  font-size: 14px
+  font-weight: 700
+  text-transform: uppercase
+  border-radius: 0
+
+.line
+  max-width: 392px
+  height: 0
+  border: 1px solid #000000
+  margin: 5px 0
+
+
+
+/* HEADER */ 
+/* ================================================ */  
+.header-page
+  background: url('../img/header-bg.png') center center no-repeat
+  background-size: cover
+  padding: 0
+  padding-bottom: 450px
+.header-nav
+  margin-bottom: 157px
+  height: 62px
+  background-color: rgba(0%, 3%, 5%, 0.1)
+  &__list
+    height: 100%
+  &__link
+    text-decoration: none
+    color: #606060
+    font-family: 'Dosis'
+    font-size: 17px
+    font-weight: 400
+    text-transform: uppercase
+    letter-spacing: 2.01px
+    &:hover
+      color: #000000
+      border-bottom: 1px solid black
+      text-decoration: none
+
+
+@media screen and (max-width: 991px)
+  .header-nav
+    display: block
+  .header-nav__list
+    flex-direction: column
+    align-items: flex-start !important
+    margin-top: 20px
+  .header-nav__link
+    padding: 10px 0
+    display: block
+    font-weight: bold
+  .navbar-toggler
+    border: 1px solid black
+    display: flex
+    flex-direction: column
+    margin-top: 3px
+  .navbar-toggler-icon
+    width: 35px
+    height: 7px
+    background: #000
+    border-radius: 5px
+
+
+
+/* SECTION DISCOGRAPHY */ 
+/* ================================================ */  
+.disco
+  padding-top: 65px
+  padding-bottom: 452px
+  background: url('../img/disco-bg.png') center bottom no-repeat
+  &__text
+    max-width: 715px
+    margin: auto
+    margin-top: 50px
+    margin-bottom: 155px
+    color: #798285
+    font-family: "Open Sans"
+    font-size: 14px
+    font-weight: 400
+    line-height: 24.27px
+    letter-spacing: 1.65px
+.album
+  margin-top: 113px
+.album-left
+  width: 42%
+.album__year
+  opacity: 0.65
+  color: #000000
+  font-family: "Open Sans"
+  font-size: 14px
+  font-weight: 700
+  text-transform: uppercase
+  padding-bottom: 10px
+  border-bottom: 1px solid #000000
+.album__name
+  color: #000000
+  font-family: "Open Sans"
+  font-size: 14px
+  font-weight: 700
+  text-transform: uppercase
+  margin-top: 10px
+.album-descr
+  width: 55%
+  &__title
+    color: #000000
+    font-family: "Open Sans"
+    font-size: 23px
+    font-weight: 400
+    letter-spacing: 0.41px
+  &__text
+    margin-top: 18px
+    margin-bottom: 30px
+    color: #acacac
+    font-family: "Open Sans"
+    font-size: 14px
+    font-weight: 400
+    letter-spacing: 0.25px
+    line-height: 24.27px
+.album-descr__btn_bg1
+  background: url(../img/btn-bg1.png)
+.album-descr__btn_bg2
+  background: url(../img/btn-bg2.png)
+  background-position-x: -1px
+.album-descr__btn_bg3
+  background: url(../img/btn-bg3.png)
+  background-position-x: -1px
+.album-descr__btn_black
+  color: black
+
+
+@media screen and (min-width: 2000px)
+  .disco
+    background-size: contain
+@media screen and (max-width: 1260px)
+  .album
+    flex-wrap: wrap
+  .album-left
+    width: 90%
+  .album-descr
+    margin-top: 20px
+    width: 75%
+@media screen and (max-width: 850px)
+  .disco
+    padding-bottom: 350px
+  .album-left
+    width: 100%
+  .album-descr
+    width: 100%
+@media screen and (max-width: 490px)
+  .disco
+    padding-bottom: 250px
+  .disco__text
+    margin-bottom: 100px
+
+
+
+/* CONCERT TOUR */ 
+/* ================================================ */  
+.tour 
+  .container
+    padding: 0 15px
+.tour
+  padding: 0
+  padding-top: 165px
+  &__text
+    max-width: 876px
+    color: #798285
+    font-family: "Open Sans"
+    font-size: 14px
+    font-weight: 400
+    line-height: 24.27px
+    letter-spacing: 1.65px
+    margin: auto
+    margin-top: 57px
+    margin-bottom: 117px
+.one-tour-wrapper
+  background: url('../img/tour-bg.png') center bottom no-repeat
+  background-size: cover
+  padding-bottom: 250px
+  padding-top: 355px  
+.one-tour
+  max-width: 670px
+  &__date
+    opacity: 0.65
+    color: #000000
+    font-family: "Open Sans"
+    font-size: 14px
+    font-weight: 700
+    text-transform: uppercase
+    text-align: left
+  &__name
+    color: #000000
+    font-family: "Open Sans"
+    font-size: 14px
+    font-weight: 700
+    text-transform: uppercase
+    text-align: left
+  &__period
+    font-family: "Open Sans"
+    font-size: 23px
+    font-weight: 400
+    letter-spacing: 0.41px
+    margin-top: 80px
+    margin-bottom: 20px
+  &__text
+    color: #798285
+    font-family: "Open Sans"
+    font-size: 14px
+    font-weight: 400
+    line-height: 24.27px
+    letter-spacing: 0.25px
+    margin-bottom: 38px
+  &__btn
+    color: #000000
+    font-family: "Open Sans"
+    font-size: 14px
+    font-weight: 700
+    background: transparent
+    border: 1px solid rgba(39%, 39%, 39%, 0.44)
+    transition: all .3s ease
+    &:hover
+      background: rgba(99, 99, 99, 0.44)
+      color: white
+ 
+
+@media screen and (max-width: 1260px)
+  .tour
+    padding-top: 100px
+  .one-tour
+    margin: auto
+  .tour__text
+    margin-bottom: 0
+@media screen and (max-width: 580px)
+  .one-tour-wrapper
+    padding-bottom: 150px
+    padding-top: 155px
+
+
+
+
+/* COMPOSITION */ 
+/* ================================================ */
+.composition
+  padding-top: 160px
+  padding-bottom: 140px
+  background-color: #fff
+  text-align: center
+  &__title
+    margin-bottom: 55px
+    color: #000000
+    font-family: Dosis
+    font-size: 50px
+    font-weight: 400
+    text-transform: uppercase
+    letter-spacing: 5.96px
+    background: url('../img/line-throw.png') center center no-repeat
+  &__text
+    max-width: 689px
+    margin: auto
+    color: #798285
+    font-family: "Open Sans"
+    font-size: 14px
+    font-weight: 400
+    line-height: 24.27px
+    letter-spacing: 1.65px
+    margin-bottom: 160px
+.composition-block
+  display: flex
+  margin-bottom: 50px
+.composition-descr
+  width: 50%
+  padding: 30px 35px
+  padding-right: 60px
+  background-color: #f5f6f6
+  text-align: left
+  position: relative
+  min-height: 422px
+  &__name-song
+    color: #000000
+    font-family: "Open Sans"
+    font-size: 23px
+    font-weight: 400
+    line-height: 24.27px
+    letter-spacing: 0.41px
+    margin-top: 43px
+    margin-bottom: 33px
+  &__text
+    color: #798285
+    font-family: "Open Sans"
+    font-size: 14px
+    font-weight: 400
+    line-height: 24.27px
+    // Text style for "", Radioac"
+    letter-spacing: 0.25px
+    margin-bottom: 60px
+  &-social
+    display: flex
+    align-items: flex-end
+    position: absolute
+    bottom: 30px
+    &__btn
+      border: 1px solid #636363
+      color: #000000
+      font-family: "Open Sans"
+      font-size: 14px
+      font-weight: 700
+      line-height: 56px
+      padding: 0
+      margin-right: 35px
+      transition: all .3s ease
+      &:hover
+        background: rgba(99, 99, 99, 0.44)
+        color: white
+.social-small-block
+  display: flex
+  margin-right: 20px
+  &__text
+    color: #999999
+    font-family: "Myriad Pro"
+    font-size: 12px
+    font-weight: 400
+    margin-left: 10px
+
+.composition-video
+  width: 50%
+.social-small-container
+  display: flex
+  height: 16px
+
+
+@media screen and (max-width: 1230px)
+  .composition
+    padding-top: 100px
+    padding-bottom: 100px
+  .composition-block
+    flex-wrap: wrap
+  .composition-descr
+    width: 70%
+    margin: auto
+  .composition-video
+    width: 70%
+    margin: auto
+    img
+      width: 100%
+  .composition-descr-social
+    position: static
+    margin-top: 75px
+
+@media screen and (max-width: 890px)
+  .social-small-block
+    display: none
+@media screen and (max-width: 770px)
+  .composition-descr
+    width: 100%
+  .composition-video
+    width: 100%
+  .composition
+    padding-right: 0
+    padding-left: 0
+  .composition__title, .composition__text
+    margin-right: 15px
+    margin-left: 15px
+@media screen and (max-width: 555px)
+  .composition-descr
+    padding: 20px
+@media screen and (max-width: 410px)
+  .composition__title
+    font-size: 38px
+  .composition__text
+    margin-bottom: 70px
+
+
+
+
+/* SECTION SLIDER */ 
+/* ================================================ */
+.slider-section
+  padding: 160px 0 85px 0
+  background: url('../img/slider-section-bg.png') center center no-repeat
+  background-size: cover
+  &__notes
+    margin: auto
+    margin-bottom: 45px
+.slider-wrapper
+  margin: auto
+  width: 882px
+.sl-item
+  text-align: center
+  &__title
+    color: #ffffff
+    font-family: Dosis
+    font-size: 18px
+    font-weight: 400
+    line-height: 26.27px
+    text-transform: uppercase
+    letter-spacing: 2.18px
+  &__text
+    max-width: 510px
+    margin: auto
+    color: #798285
+    font-family: "Open Sans"
+    font-size: 14px
+    font-weight: 400
+    line-height: 24.27px
+    letter-spacing: 0.25px
+    margin-top: 45px
+    margin-bottom: 65px
+  &__years
+    color: #565e61
+    font-family: "Open Sans"
+    font-size: 14px
+    font-weight: 400
+    letter-spacing: 0.25px
+
+.owl-carousel .owl-dots
+  text-align: center
+  margin-top: 80px
+.owl-carousel .owl-dot
+  width: 11px
+  height: 11px
+  border: 1px solid #ffffff !important
+  background-color: #ffffff !important
+  border-radius: 50% !important
+  margin: 0 38px
+  box-sizing: border-box
+.owl-carousel .owl-dot.active
+  background: transparent !important
+
+.owl-carousel .owl-nav .owl-next, 
+.owl-carousel .owl-nav .owl-prev
+  width: 85px
+  height: 171px
+  position: absolute
+  top: 10%
+.owl-next span, .owl-prev span
+  display: none 
+
+.owl-next
+  background: url('../img/next-icon.png') !important
+  right: 0
+.owl-prev
+  background: url('../img/prev-icon.png') !important
+  left: 0
+
+
+@media screen and (max-width: 990px)
+  .owl-carousel .owl-nav .owl-next, 
+  .owl-carousel .owl-nav .owl-prev
+    width: 45px
+    height: 91px
+    background-size: cover !important
+    top: 25%
+  .slider-section
+    padding-top: 110px
+  .sl-item__title
+    margin-left: 15px
+    margin-right: 15px
+@media screen and (max-width: 640px)
+  .owl-carousel .owl-nav .owl-next, 
+  .owl-carousel .owl-nav .owl-prev
+    display: none
+@media screen and (max-width: 520px)
+  .sl-item__text
+    margin-left: 15px
+    margin-right: 15px
+
+
+
+/* SECTION SONGS */ 
+/* ================================================ */
+.songs-section
+  padding-top: 165px
+  padding-bottom: 100px
+.songs-list
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+.song
+  padding: 35px
+  width: 384px
+  min-height: 422px
+  box-sizing: border-box
+  margin-bottom: 28px
+  position: relative
+  &__date
+    opacity: 0.65
+    color: #000000
+    font-family: "Open Sans"
+    font-size: 14px
+    font-weight: 700
+    text-transform: uppercase
+  &__line
+    max-width: 312px
+    height: 0
+    border-bottom: 1px solid #000000
+  &__album
+    color: #ffffff
+    font-family: "Open Sans"
+    font-size: 14px
+    font-weight: 700
+    text-transform: uppercase
+  &__name
+    color: #000000
+    font-family: "Open Sans"
+    font-size: 23px
+    font-weight: 400
+    line-height: 24.27px
+    letter-spacing: 0.41px
+    margin-top: 45px
+  &__text
+    color: #798285
+    font-family: "Open Sans"
+    font-size: 14px
+    font-weight: 400
+    line-height: 24.27px
+    letter-spacing: 0.25px
+    position: absolute
+    top: 207px
+    width: calc(100% - 70px)
+.song1
+  background: url('../img/song1-bg.png') center center no-repeat
+  background-size: cover
+.song2
+  background: url('../img/song2-bg.png') center center no-repeat
+  background-size: cover
+.song3
+  background: url('../img/song3-bg.png') center center no-repeat
+  background-size: cover
+.song4
+  background: url('../img/song4-bg.png') center center no-repeat
+  background-size: cover
+.song5
+  background: url('../img/song5-bg.png') center center no-repeat
+  background-size: cover
+.song6
+  background: url('../img/song6-bg.png') center center no-repeat
+  background-size: cover
+
+
+@media screen and (max-width: 1230px)
+  .songs-list
+    justify-content: space-around
+@media screen and (max-width: 814px)
+  .sl-item__text
+    margin-left: 15px
+    margin-right: 15px
+  .songs-section
+    padding: 100px 0 80px 0
+
+@media screen and (max-width: 780px)
+  .song__text
+    position: static
+    width: 100%
+    margin-top: 30px
+@media screen and (max-width: 410px)
+  .song
+    width: 100%
+
+
+
+/* SECTION Upcoming Events */ 
+/* ================================================ */
+.events-section
+  padding-top: 214px
+  padding-bottom: 188px
+  background: url('../img/events-bg.png') center center no-repeat
+  background-size: cover
+  .container
+    display: flex
+    justify-content: flex-end
+.events
+  width: 544px
+  &__title
+    margin-bottom: 119px
+  &__name-tour
+    color: #000000
+    font-family: "Open Sans"
+    font-size: 23px
+    font-weight: 400
+    letter-spacing: 0.41px
+  &__line
+    width: 132px
+    height: 0
+    border-top: 1px solid #000000
+    margin-top: 9px
+    margin-bottom: 12px
+  &__text
+    color: #798285
+    font-family: "Open Sans"
+    font-size: 14px
+    font-weight: 400
+    line-height: 24.27px
+    letter-spacing: 0.25px
+  &__date-tour
+    opacity: 0.65
+    color: #000000
+    font-family: "Open Sans"
+    font-size: 14px
+    font-weight: 700
+    text-transform: uppercase
+.vertical-line
+  width: 0
+  height: 165px
+  border-left: 1px solid #000000
+  margin: 23px 0
+  margin-left: 35px
+  &_sm
+    height: 51px
+    margin: 12px 0
+    margin-left: 35px
+
+
+@media screen and (max-width: 880px)
+  .events-section
+    padding-top: 100px
+    padding-bottom: 50px
+    .container
+      justify-content: flex-start
+@media screen and (max-width: 440px)
+  .events__title
+    margin-bottom: 70px
+
+
+
+/* SECTION HISTORY */ 
+/* ================================================ */
+.history
+  margin-top: 160px
+  padding-top: 15px
+  padding-bottom: 615px
+  background: url('../img/history-bg.png') center center no-repeat
+  background-size: cover
+  text-align: center
+  &__title
+    color: #5b5c5a
+    font-family: Dosis
+    font-size: 50px
+    font-weight: 400
+    text-transform: uppercase
+    letter-spacing: 5.96px
+    background: url('../img/history-line-throw.png') center no-repeat
+  &__text
+    max-width: 810px
+    color: #798285
+    font-family: "Open Sans"
+    font-size: 14px
+    font-weight: 400
+    line-height: 24.27px
+    letter-spacing: 1.65px
+    margin: auto
+    margin-top: 55px
+    margin-bottom: 200px
+  &-line
+    width: 147px
+    height: 0
+    border: 1px solid #000000
+    opacity: 0.28
+    margin-top: 20px
+  &-days
+    display: flex
+    padding: 0 15px
+    justify-content: space-between
+  &-day
+    &__date
+      color: #575a59
+      font-family: Dosis
+      font-size: 35px
+      font-weight: 400
+      text-transform: uppercase
+      letter-spacing: 4.19px
+      margin-bottom: 40px
+      cursor: pointer
+    &__text
+      width: 204px
+      color: #5a5a58
+      font-family: "Open Sans"
+      font-size: 14px
+      font-weight: 400
+      line-height: 19.27px
+      transition: all 0.3s ease
+      opacity: 0
+.history-day__text.active
+  opacity: 1
+
+
+@media screen and (max-width: 1110px)
+  .history-days
+    flex-direction: column
+  .history-line
+    margin: auto
+  .history-day__date
+    margin-top: 20px
+  .history-day__text
+    margin: auto
+    margin-bottom: 40px
+    opacity: 1
+    color: black
+    font-weight: bold
+  .history
+   margin-top: 100px
+   padding-bottom: 200px
+  .history__text
+    margin-bottom: 100px
+  
+
+
+/* SECTION CONTACT */ 
+/* ================================================ */
+.contact-section
+  margin-top: 120px
+  padding-top: 151px
+  padding-bottom: 290px
+  background: url('../img/contact-bg.png') center center no-repeat
+  background-size: cover
+  .container
+    display: flex
+    justify-content: flex-end
+.contact
+  width: 550px
+  &__title
+    color: #454545
+    font-family: Dosis
+    font-size: 50px
+    font-weight: 400
+    text-transform: uppercase
+    letter-spacing: 5.96px
+    background: url('../img/contact-line-throw.png') left center no-repeat
+    margin-bottom: 35px
+  &__address, &__tel
+    color: #798285
+    font-family: "Open Sans"
+    font-size: 14px
+    font-weight: 400
+    letter-spacing: 0.25px
+    margin-bottom: 12px
+  &-form
+    width: 382px
+    &__input
+      width: 100%
+      padding: 10px 0
+      margin-bottom: 40px
+      border: none
+      background: transparent
+      border-bottom: 1px solid #000000
+      box-sizing: 
+      color: #798285
+      font-family: "Open Sans"
+      font-size: 14px
+      font-weight: 400
+      letter-spacing: 0.25px
+      &:focus
+        outline: none
+    &__btn
+      border: none
+      background: transparent
+      color: #000000
+      font-family: "Open Sans"
+      font-size: 20px
+      font-weight: 700
+      text-transform: uppercase  
+      cursor: pointer
+      &:focus, &:active
+        outline: none
+.contact-block
+  margin-top: 85px
+  display: flex
+.contact-line
+  width: 0
+  height: 191px
+  border-left: 1px solid #000000
+  margin-left: 120px
+  margin-top: 25px
+.contact-social
+  display: flex
+  flex-direction: column
+  align-items: center
+  height: 191px
+  justify-content: space-between
+  padding: 3px 0
+  margin-top: 25px
+  margin-left: 25px
+  &__link
+    display: block
+  &__facebook
+    width: 8px
+    height: 17px
+    background: url('../img/facebook-icon.png')
+  &__instagram
+    width: 19px
+    height: 19px
+    background: url('../img/instagram-icon.png')
+  &__twitter
+    width: 16px
+    height: 13px
+    background: url('../img/twiiter-icon.png')
+
+
+@media screen and (max-width: 880px)
+  .contact-section
+    margin-top: 0
+  .contact-section .container
+    justify-content: flex-start
+@media screen and (max-width: 580px)
+  .contact-line
+    margin-left: 70px
+@media screen and (max-width: 545px)
+  .contact-block
+    flex-wrap: wrap
+  .contact-form
+    width: 100%
+  .contact-social
+    flex-direction: row
+    height: auto
+    width: 100%
+    margin-left: 0
+  .contact-line
+    display: none
